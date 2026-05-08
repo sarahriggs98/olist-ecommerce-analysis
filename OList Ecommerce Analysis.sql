@@ -49,6 +49,8 @@ FROM (
 GROUP BY 1
 ORDER BY total_customers DESC;
 
+-- Found only one time customers, QC stop to check if any customers placed more than one order
+
 SELECT 
     customer_id,
     COUNT(order_id) AS order_count
